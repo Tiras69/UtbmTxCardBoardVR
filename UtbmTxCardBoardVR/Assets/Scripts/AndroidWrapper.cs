@@ -8,7 +8,7 @@ using System.Collections;
 /// since this class is not a singleton it have to be attached to a one GameObject
 /// in every scene were you want to access specifics parameters of an Android API.
 /// </summary>
-public sealed class AndroidWrapper : MonoBehaviour {
+public sealed class AndroidWrapper {
 
     #region public fields
     public static Vector2   cameraResolution        { get; private set; }   // gives the resolution of the front back camera.
@@ -21,7 +21,7 @@ public sealed class AndroidWrapper : MonoBehaviour {
     /// Static methods thats search in the native Android APIs some parameters
     /// that can be useful in the application.
     /// </summary>
-    private static void GetParameters()
+    public static void GetParameters()
     {
         try {
             AndroidJavaClass cameraClass = new AndroidJavaClass("android.hardware.Camera");
@@ -62,11 +62,5 @@ public sealed class AndroidWrapper : MonoBehaviour {
         }
     }
 
-    #region Unity stuff related
-    // Use this for initialization
-    void Start () {
-        AndroidWrapper.GetParameters();
-	}
-    #endregion
 }
 #endif
