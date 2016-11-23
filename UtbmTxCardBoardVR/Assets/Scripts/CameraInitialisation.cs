@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraInitialisation : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         ApplicationManager.Instance.mainCameraReference = this.gameObject;
         
 	}

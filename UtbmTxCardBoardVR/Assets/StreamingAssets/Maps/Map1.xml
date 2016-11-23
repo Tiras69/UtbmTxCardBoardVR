@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <Rooms>
+    <Room>
+      <Coordinates>
+        <Coordinate x="10.0" y="0.0"/>
+        <Coordinate x="15.0" y="5.0"/>
+        <Coordinate x="10.0" y="10.0"/>
+        <Coordinate x="0.0" y="10.0"/>
+        <Coordinate x="0.0" y="0.0"/>
+      </Coordinates>
+    </Room>
+  </Rooms>
+</Map>

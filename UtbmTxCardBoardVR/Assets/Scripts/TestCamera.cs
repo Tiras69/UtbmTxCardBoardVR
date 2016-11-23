@@ -5,7 +5,6 @@ using System.Collections;
 public class TestCamera : MonoBehaviour {
 
     
-    
     private WebCamTexture cameraTexture = null;
 
     // Use this for initialization
