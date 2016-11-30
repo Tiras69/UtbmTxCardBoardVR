@@ -12,7 +12,7 @@ Shader "Custom/HaloEffect" {
 		//Tags {"Queue"="Geometry-1"}
 		LOD 200
 		
-		//ZWrite On
+		ZWrite On
 		//Ztest LEqual
 		Blend SrcAlpha OneMinusSrcAlpha
 
