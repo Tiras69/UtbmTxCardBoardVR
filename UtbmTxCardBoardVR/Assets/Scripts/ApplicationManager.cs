@@ -7,6 +7,8 @@ public sealed class ApplicationManager : Singleton<ApplicationManager> {
 
 	public void getAndroidParameters()
     {
+#if UNITY_ANDROID
         AndroidWrapper.GetParameters();
+#endif
     }
 }
