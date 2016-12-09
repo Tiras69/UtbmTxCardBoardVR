@@ -65,9 +65,9 @@ public class PlaceBackgroungRawImage : MonoBehaviour {
 
         // 1 Left 2 Right But according to Google the Left Eye is right and the Left Eye is right.
 
-        Vector3 worldCam1 = cams[2].ViewportToWorldPoint(new Vector3(0, 0, cam.farClipPlane - 100.0f));
-        Vector3 worldCam2 = cams[2].ViewportToWorldPoint(new Vector3(0, 1, cam.farClipPlane - 100.0f));
-        Vector3 worldCam3 = cams[1].ViewportToWorldPoint(new Vector3(1, 0, cam.farClipPlane - 100.0f));
+        Vector3 worldCam1 = cams[2].ViewportToWorldPoint(new Vector3(0, 0, cam.farClipPlane - 300.0f));
+        Vector3 worldCam2 = cams[2].ViewportToWorldPoint(new Vector3(0, 1, cam.farClipPlane - 300.0f));
+        Vector3 worldCam3 = cams[1].ViewportToWorldPoint(new Vector3(1, 0, cam.farClipPlane - 300.0f));
         float width = worldCam3.x - worldCam1.x;
         float height = worldCam2.y - worldCam1.y;
 
@@ -79,9 +79,11 @@ public class PlaceBackgroungRawImage : MonoBehaviour {
 
         panel.sizeDelta = new Vector2(width, height);
         Vector3 tmpVect = panel.position;
-        tmpVect.z = cam.farClipPlane - 100.0f;
+        tmpVect.z = cam.farClipPlane - 300.0f;
         panel.position = tmpVect;
         this.transform.SetParent(cam.transform);
+
+        cam.transform.position = new Vector3(1.0f, 1.0f, 0.5f);
 
         #endregion
     }

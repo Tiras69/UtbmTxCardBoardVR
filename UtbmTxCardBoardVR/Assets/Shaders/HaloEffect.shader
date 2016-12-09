@@ -27,19 +27,19 @@ Shader "Custom/HaloEffect" {
 			#include "UnityCG.cginc"
 
 			struct appdata {
-				float4 vertex : POSITION;
+				fixed4 vertex : POSITION;
 				
 			};
 
 			struct v2f {
-				float4 vertex : SV_POSITION;
-				float4 worldPos : TEXCOORD0;
+				fixed4 vertex : SV_POSITION;
+				fixed4 worldPos : TEXCOORD0;
 			};
 
-			uniform float3 _GhostPosition;
-			uniform float4 _HaloColor;
-			uniform float _Range;
-			uniform float _Height;
+			uniform fixed3 _GhostPosition;
+			uniform fixed4 _HaloColor;
+			uniform fixed _Range;
+			uniform fixed _Height;
 
 			v2f vert(appdata v) {
 				v2f o;
@@ -57,7 +57,7 @@ Shader "Custom/HaloEffect" {
 				color.a = 1 - (distance(i.worldPos.xz, _GhostPosition.xz) / _Range);
 				// checking the height.
 				// if the y position is out of range we decrease the alpha.
-				float currentHeight = abs(i.worldPos.y - _GhostPosition.y);
+				fixed currentHeight = abs(i.worldPos.y - _GhostPosition.y);
 				color.a = color.a - smoothstep(_Height,_Height+_Range,currentHeight);
 
 
@@ -70,5 +70,5 @@ Shader "Custom/HaloEffect" {
 
 	
 	}
-	FallBack "Diffuse"
+	//FallBack "Diffuse"
 }
