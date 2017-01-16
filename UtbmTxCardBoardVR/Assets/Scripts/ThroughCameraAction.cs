@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ThroughCameraAction : GhostAction {
+public class ThroughCameraAction : Action {
 
     private GameObject mainCamera;
     private Quaternion targetQuaternion;

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveGyroscope : GhostAction
+public class MoveGyroscope : Action
 {
     private Gyroscope gyroscope;
     private Rigidbody rb;
