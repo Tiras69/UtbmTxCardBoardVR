@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StopAction : Action {
+public class StopAction : GhostAction {
 
     public float inertie;
 

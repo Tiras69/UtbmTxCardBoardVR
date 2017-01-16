@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Action : MonoBehaviour {
+public abstract class GhostAction : MonoBehaviour {
 
     public float velocity;
     public float angleVelocity;

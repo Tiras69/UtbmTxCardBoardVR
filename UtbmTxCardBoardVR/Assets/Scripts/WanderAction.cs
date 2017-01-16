@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WanderAction : Action {
+public class WanderAction : GhostAction {
     
 	// Use this for initialization
 	void Start () {

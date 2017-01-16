@@ -42,7 +42,7 @@ namespace Gvr.Internal {
   }
 
   struct EmulatorTouchEvent {
-    // Action constants. These should match the constants in the Android
+    // GhostAction constants. These should match the constants in the Android
     // MotionEvent:
     // http://developer.android.com/reference/android/view/MotionEvent.html#ACTION_CANCEL
     public enum Action {
